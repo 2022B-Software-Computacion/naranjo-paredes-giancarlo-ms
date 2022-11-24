@@ -1,7 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="" />
+    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/01-android/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/androidTest/java/com/example/ngpaplicattion/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/java/com/example/ngpaplicattion/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/app/src/test/java/com/example/ngpaplicattion/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-android/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +66,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/escritorio.virtual16/Desktop/naranjo-paredes-giancarlo-ms",
+    "last_opened_file_path": "C:/Users/escritorio.virtual16/Desktop/aplicacionesMoviles/naranjo-paredes-giancarlo-ms",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
@@ -36,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669131014503</updated>
       <workItem from="1669131017753" duration="160000" />
+      <workItem from="1669299465990" duration="65000" />
     </task>
     <servers />
   </component>
