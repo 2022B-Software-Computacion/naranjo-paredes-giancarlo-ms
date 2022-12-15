@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.gradle/7.3.3/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.gradle/7.3.3/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-android/app/google-services.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-Kotlin/nuevo/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-Kotlin/nuevo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00-Kotlin/nuevo/src/main/kotlin/Main.kts" beforeDir="false" afterPath="$PROJECT_DIR$/00-Kotlin/nuevo/src/main/kotlin/Main.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/01-android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/01-android/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,18 +21,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/escritorio.virtual16/Desktop/aplicacionesMoviles/naranjo-paredes-giancarlo-ms&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/escritorio.virtual16/Desktop/piedra-romero-enrique-edison-moviles/00-kotlin",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="naranjo-paredes-giancarlo-ms" />
+      <shortenClasspath name="NONE" />
       <option name="filePath" value="$PROJECT_DIR$/00-Kotlin/nuevo/src/main/kotlin/Main.kts" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,7 +58,8 @@
       <workItem from="1669131017753" duration="160000" />
       <workItem from="1669299465990" duration="65000" />
       <workItem from="1670336832245" duration="448000" />
-      <workItem from="1670940904701" duration="383000" />
+      <workItem from="1670940904701" duration="4061000" />
+      <workItem from="1670948076083" duration="4291000" />
     </task>
     <servers />
   </component>
