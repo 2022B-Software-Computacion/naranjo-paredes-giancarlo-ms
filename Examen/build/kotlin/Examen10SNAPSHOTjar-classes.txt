@@ -1,1 +1,0 @@
-C:\Users\gianc\Desktop\Aplicaciones_moviles\naranjo-paredes-giancarlo-ms\Examen\build\classes\kotlin\main\Alumno.class;C:\Users\gianc\Desktop\Aplicaciones_moviles\naranjo-paredes-giancarlo-ms\Examen\build\classes\kotlin\main\Colegio.class;C:\Users\gianc\Desktop\Aplicaciones_moviles\naranjo-paredes-giancarlo-ms\Examen\build\classes\kotlin\main\MainKt.class
