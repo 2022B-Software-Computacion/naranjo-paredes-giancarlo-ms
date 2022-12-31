@@ -6,6 +6,9 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var edNombre: EditText
@@ -14,8 +17,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var edEconomia: EditText
     private lateinit var btnIngresar: Button
     private lateinit var btnVisualizar: Button
+    private lateinit var btnActualizar: Button
+
 
     private lateinit var conexion: Conexion
+    private lateinit var recyclerView: RecyclerView
+    private var interfaz: AlumnoInterfaz? = null
+    private var alumno: Alumno? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,15 +31,62 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         inicializarVista()
+        inicializarRecyclerView()
         conexion = Conexion(this)
         btnIngresar.setOnClickListener { crearAlumno() }
         btnVisualizar.setOnClickListener { leerAlumnos() }
+        btnActualizar.setOnClickListener { actualizarAlumno() }
+
+        interfaz?.setOnClickItem {
+            Toast.makeText(this, it.nombre, Toast.LENGTH_SHORT).show()
+            // Actualizamos los registros
+            edNombre.setText(it.nombre)
+            edEstatura.setText(it.estatura.toString())
+            edMatricula.setText(it.matricula.toString())
+            edEconomia.setText(it.economia.toString())
+            alumno = it
+        }
+        interfaz?.setOnClickDeleteItem {
+            eliminarEstudiante(it.idAlumno)
+        }
+
+
+    }
+
+    private fun actualizarAlumno() {
+        val nombre = edNombre.text.toString()
+        val estatura = edEstatura.text.toString().toDouble()
+        val matricula = edMatricula.text.toString().toInt()
+        val economia = edEconomia.text.toString().toDouble()
+
+        //Revisar que efectivamente haya cambios
+        if (nombre == alumno?.nombre && estatura == alumno?.estatura) {
+            Toast.makeText(this, "Registro no cambiado", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (alumno == null) return
+        val alumno = Alumno(
+            idAlumno = alumno!!.idAlumno,
+            nombre = nombre,
+            estatura = estatura,
+            matricula = matricula,
+            economia = economia
+        )
+        val estado = conexion.actualizarAlumno(alumno)
+        if (estado > -1) {
+            clearEditText()
+            leerAlumnos()
+        } else {
+            Toast.makeText(this, "Actualizacion fallida", Toast.LENGTH_SHORT).show()
+        }
+
+
     }
 
     private fun leerAlumnos() {
         val alumnos = conexion.leerAlumno()
-        println(alumnos)
-        Log.e("pppp", "${alumnos.size}")
+        //Necesitaremos una vista para la muestra de datos
+        interfaz?.agregarRegistros(alumnos)
     }
 
     private fun crearAlumno() {
@@ -53,13 +108,30 @@ class MainActivity : AppCompatActivity() {
             if (estado > -1) {
                 Toast.makeText(this, "Estudiante agregado", Toast.LENGTH_SHORT).show()
                 clearEditText()
+                leerAlumnos()
             } else {
                 Toast.makeText(this, "Registro no guardado", Toast.LENGTH_SHORT).show()
 
             }
         }
+    }
 
+    private fun eliminarEstudiante(id: Int) {
+        if (id == null) return
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Estas seguro que quieres eliminar este estudiante?")
+        builder.setCancelable(true)
+        builder.setPositiveButton("Si") { dialog, _ ->
+            conexion.eliminarAlumno(id)
+            leerAlumnos()
+            dialog.dismiss()
+        }
+        builder.setNegativeButton("No") { dialog, _ ->
+            dialog.dismiss()
+        }
 
+        val alert = builder.create()
+        alert.show()
     }
 
     private fun clearEditText() {
@@ -71,6 +143,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun inicializarRecyclerView() {
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        interfaz = AlumnoInterfaz()
+        recyclerView.adapter = interfaz
+
+    }
+
     private fun inicializarVista() {
         edNombre = findViewById(R.id.edNombre)
         edEstatura = findViewById(R.id.edEstatura)
@@ -78,5 +157,7 @@ class MainActivity : AppCompatActivity() {
         edEconomia = findViewById(R.id.edEconomia)
         btnIngresar = findViewById(R.id.btnIngresar)
         btnVisualizar = findViewById(R.id.btnVisualizar)
+        btnActualizar = findViewById(R.id.btnActualizar)
+        recyclerView = findViewById(R.id.recycleView)
     }
 }

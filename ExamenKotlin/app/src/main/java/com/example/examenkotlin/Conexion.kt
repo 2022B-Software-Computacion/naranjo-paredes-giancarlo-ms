@@ -85,5 +85,29 @@ class Conexion(context: Context) :
         return alumnos
     }
 
+    fun actualizarAlumno(alumno: Alumno): Int {
+        val db = this.writableDatabase
+        val cv = ContentValues()
+        cv.put(IDALUMNO, alumno.idAlumno)
+        cv.put(NOMBRE, alumno.nombre)
+        cv.put(ESTATURA, alumno.estatura)
+        cv.put(MATRICULA, alumno.matricula)
+        cv.put(ECONOMIA, alumno.economia)
+        val success = db.update(TBL_ALUMNO, cv, "id=" + alumno.idAlumno, null)
+        db.close()
+        return success
+    }
+
+    fun eliminarAlumno(idAlumno: Int): Int {
+        val db = this.writableDatabase
+        val cv = ContentValues()
+        cv.put(IDALUMNO, idAlumno)
+        val success = db.delete(TBL_ALUMNO, "id=$idAlumno", null)
+        db.close()
+        return success
+
+
+    }
+
 
 }
