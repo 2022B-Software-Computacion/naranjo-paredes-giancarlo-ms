@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="" />
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +38,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -45,6 +50,14 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunManager" selected="Kotlin script.Examen.kts">
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/Giancarlo Naranjo/Desktop/Aplicaciones_moviles/naranjo-paredes-giancarlo-ms"
+  }
+}]]></component>
+  <component name="RunManager" selected="Kotlin script (Beta).Examen.kts">
+>>>>>>> main
     <configuration name="Examen.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -66,15 +79,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin script.Examen.kts" />
-      <item itemvalue="Kotlin script.Main.kts" />
+      <item itemvalue="Kotlin script (Beta).Examen.kts" />
+      <item itemvalue="Kotlin script (Beta).Main.kts" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Kotlin script.Main.kts" />
-        <item itemvalue="Kotlin script.Examen.kts" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
