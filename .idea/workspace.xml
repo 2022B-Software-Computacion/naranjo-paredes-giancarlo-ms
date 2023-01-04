@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExamenKotlin/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamenKotlin/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExamenKotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamenKotlin/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExamenKotlin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamenKotlin/.idea/misc.xml" afterDir="false" />
     </list>
+=======
+<<<<<<< HEAD
+    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+=======
+    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="" />
+>>>>>>> main
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +47,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -45,6 +56,28 @@
   }
 }</component>
   <component name="RunManager" selected="Kotlin script (Beta).Main.kts">
+=======
+<<<<<<< HEAD
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ExamenKotlin" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RunManager" selected="Kotlin script.Examen.kts">
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/Giancarlo Naranjo/Desktop/Aplicaciones_moviles/naranjo-paredes-giancarlo-ms"
+  }
+}]]></component>
+  <component name="RunManager" selected="Kotlin script (Beta).Examen.kts">
+>>>>>>> main
+>>>>>>> main
     <configuration name="Examen.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
