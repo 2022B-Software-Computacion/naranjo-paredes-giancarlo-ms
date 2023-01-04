@@ -37,7 +37,7 @@ class Conexion(context: Context) :
         val createTableColegio = (
                 "CREATE TABLE " + TBL_COLEGIO +
                         "(" +
-                        IDCOLEGIO + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                        IDCOLEGIO + " INTEGER PRIMARY KEY," +
                         NOMBRECOLEGIO + " TEXT," +
                         INVERSION + " real," +
                         BLOQUE + " TEXT," +
