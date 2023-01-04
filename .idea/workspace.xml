@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="" />
+    <list default="true" id="e49bd0a6-8c57-49e3-b313-6046532e2f55" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamenKotlin/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamenKotlin/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamenKotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamenKotlin/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamenKotlin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamenKotlin/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,12 +37,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/Giancarlo Naranjo/Desktop/Aplicaciones_moviles/naranjo-paredes-giancarlo-ms"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Giancarlo Naranjo/Desktop/Aplicaciones_moviles/naranjo-paredes-giancarlo-ms&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Kotlin script (Beta).Examen.kts">
+}</component>
+  <component name="RunManager" selected="Kotlin script (Beta).Main.kts">
     <configuration name="Examen.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -49,7 +56,7 @@
       </method>
     </configuration>
     <configuration name="Main.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="naranjo-paredes-giancarlo-ms" />
       <shortenClasspath name="NONE" />
@@ -62,6 +69,11 @@
       <item itemvalue="Kotlin script (Beta).Examen.kts" />
       <item itemvalue="Kotlin script (Beta).Main.kts" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin script (Beta).Main.kts" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
