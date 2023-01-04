@@ -41,7 +41,7 @@ class Conexion(context: Context) :
                         NOMBRECOLEGIO + " TEXT," +
                         INVERSION + " real," +
                         BLOQUE + " TEXT," +
-                        FECHACREACION + " TEXT," +
+                        FECHACREACION + " TEXT" +
                         ")"
                 )
         db?.execSQL(createTableColegio)
@@ -53,17 +53,15 @@ class Conexion(context: Context) :
                         NOMBRE + " TEXT," +
                         ESTATURA + " real," +
                         MATRICULA + " INTEGER," +
-                        ECONOMIA + " real" +
+                        ECONOMIA + " real," +
                         FKCOLEGIO +
                         ")"
                 )
         db?.execSQL(createTableAlumno)
-
-
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db!!.execSQL("DROP TABLE IF EXISTS $TBL_ALUMNO;\n")
+        db!!.execSQL("DROP TABLE IF EXISTS $TBL_ALUMNO;")
         onCreate(db)
     }
 
