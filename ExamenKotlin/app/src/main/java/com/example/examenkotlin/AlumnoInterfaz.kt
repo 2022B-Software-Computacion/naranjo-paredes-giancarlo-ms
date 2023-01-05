@@ -42,7 +42,7 @@ class AlumnoInterfaz : RecyclerView.Adapter<AlumnoInterfaz.AlumnoVista>() {
         return alumnosBD.size
     }
 
-    class AlumnoVista(var view: View) : RecyclerView.ViewHolder(view) {
+    class AlumnoVista(view: View) : RecyclerView.ViewHolder(view) {
         private var idAlumno = view.findViewById<TextView>(R.id.viewIdAlumno)
         private var nombre = view.findViewById<TextView>(R.id.viewNombre)
         var btnBorrar = view.findViewById<Button>(R.id.btnBorrar)

@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val botonListView = findViewById<Button>(R.id.btn_ir_list_view)
         botonListView.setOnClickListener {
             irActividad(BListView::class.java)
+            //Implicito, el usuario va a ir directamente a la actividad
         }
     }
 

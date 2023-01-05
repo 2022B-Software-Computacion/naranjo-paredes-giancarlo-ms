@@ -16,6 +16,24 @@
         android:text="Examen CRUD en Kotlin"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/edColegio"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:hint="Colegio"
+        android:textAlignment="center"
+        android:textSize="21dp" />
+
+    <TextView
+        android:id="@+id/edIdAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:hint="Identificador Alumno"
+        android:textAlignment="center"
+        android:textSize="21dp" />
+
     <EditText
         android:id="@+id/edNombre"
         android:layout_width="match_parent"
@@ -31,20 +49,20 @@
         android:hint="Estatura"
         android:inputType="numberDecimal" />
 
-
-    <EditText
+    <Spinner
         android:id="@+id/edMatricula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Matricula" />
+
+        />
 
     <EditText
-        android:id="@+id/edEconomia"
+        android:id="@+id/edFechaNacimiento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Economia"
+        android:hint="Fecha de nacimiento"
         android:inputType="date" />
 
     <LinearLayout

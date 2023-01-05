@@ -2,19 +2,17 @@ package com.example.examenkotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var edIdAlumno: TextView
     private lateinit var edNombre: EditText
     private lateinit var edEstatura: EditText
-    private lateinit var edMatricula: EditText
-    private lateinit var edEconomia: EditText
+    private lateinit var edMatricula: Spinner
+    private lateinit var fechaNacimiento: EditText
     private lateinit var btnIngresar: Button
     private lateinit var btnVisualizar: Button
     private lateinit var btnActualizar: Button
@@ -32,20 +30,31 @@ class MainActivity : AppCompatActivity() {
 
         inicializarVista()
         inicializarRecyclerView()
+        edMatricula = findViewById(R.id.edMatricula)
+        /*ArrayAdapter<String> adapter = ArrayAdapter . createFromResource (
+                this,
+        R.array.matriculado,
+        android.R.layout.simple_spinner_item
+        )
+        */
+
         conexion = Conexion(this)
         btnIngresar.setOnClickListener { crearAlumno() }
         btnVisualizar.setOnClickListener { leerAlumnos() }
         btnActualizar.setOnClickListener { actualizarAlumno() }
 
         interfaz?.setOnClickItem {
+            var idAlumnoVista: String = "Codigo de alumno: " + it.idAlumno.toString()
+            edIdAlumno.setText(idAlumnoVista)
             Toast.makeText(this, it.nombre, Toast.LENGTH_SHORT).show()
-            // Actualizamos los registros
+            // Colocamos los registros
             edNombre.setText(it.nombre)
             edEstatura.setText(it.estatura.toString())
             edMatricula.setText(it.matricula.toString())
-            edEconomia.setText(it.economia.toString())
+            fechaNacimiento.setText(it.fechaNacimiento.toString())
             alumno = it
         }
+
         interfaz?.setOnClickDeleteItem {
             eliminarEstudiante(it.idAlumno)
         }
@@ -57,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         val nombre = edNombre.text.toString()
         val estatura = edEstatura.text.toString().toDouble()
         val matricula = edMatricula.text.toString().toInt()
-        val economia = edEconomia.text.toString().toDouble()
+        val fechaNacimiento = fechaNacimiento.text.toString()
 
         //Revisar que efectivamente haya cambios
         if (nombre == alumno?.nombre && estatura == alumno?.estatura) {
@@ -70,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             nombre = nombre,
             estatura = estatura,
             matricula = matricula,
-            economia = economia
+            fechaNacimiento = fechaNacimiento
         )
         val estado = conexion.actualizarAlumno(alumno)
         if (estado > -1) {
@@ -79,8 +88,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Actualizacion fallida", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 
     private fun leerAlumnos() {
@@ -93,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         val nombre = edNombre.text.toString()
         val estatura = edEstatura.text.toString().toDouble()
         val matricula = edMatricula.text.toString().toInt()
-        val economia = edEconomia.text.toString().toDouble()
+        val fechaNacimiento = fechaNacimiento.text.toString()
 
         if (nombre.isEmpty()) {
             Toast.makeText(this, "Porfavor ingresar todos los campos", Toast.LENGTH_SHORT).show()
@@ -102,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                 nombre = nombre,
                 estatura = estatura,
                 matricula = matricula,
-                economia = economia
+                fechaNacimiento = fechaNacimiento
             )
             val estado = conexion.crearAlumno(alumno)
             if (estado > -1) {
@@ -138,7 +145,7 @@ class MainActivity : AppCompatActivity() {
         edNombre.setText("")
         edEstatura.setText("")
         edMatricula.setText("")
-        edEconomia.setText("")
+        fechaNacimiento.setText("")
         edNombre.requestFocus()
 
     }
@@ -151,13 +158,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun inicializarVista() {
+        edIdAlumno = findViewById(R.id.edIdAlumno);
         edNombre = findViewById(R.id.edNombre)
         edEstatura = findViewById(R.id.edEstatura)
         edMatricula = findViewById(R.id.edMatricula)
-        edEconomia = findViewById(R.id.edEconomia)
+        var adaptador = ArrayAdapter.createFromResource(
+            this,
+            R.array.matriculado,
+            android.R.layout.simple_spinner_item
+        )
+        fechaNacimiento = findViewById(R.id.edFechaNacimiento)
         btnIngresar = findViewById(R.id.btnIngresar)
         btnVisualizar = findViewById(R.id.btnVisualizar)
         btnActualizar = findViewById(R.id.btnActualizar)
         recyclerView = findViewById(R.id.recycleView)
     }
+
 }
