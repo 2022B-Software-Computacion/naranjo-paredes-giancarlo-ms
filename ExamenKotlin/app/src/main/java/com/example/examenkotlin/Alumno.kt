@@ -7,8 +7,8 @@ data class Alumno(
     var idAlumno: Int = getAutoID(),
     var nombre: String = "",
     var estatura: Double = 0.0,
-    var matricula: Boolean = false,
-    var fechaNacimiento: String = ""
+    var matricula: Int = 0,
+    var economia: Double = 0.0
 
 
 ) {

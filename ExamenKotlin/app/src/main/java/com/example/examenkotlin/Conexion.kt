@@ -72,7 +72,7 @@ class Conexion(context: Context) :
         cv.put(NOMBRE, alumno.nombre)
         cv.put(ESTATURA, alumno.estatura)
         cv.put(MATRICULA, alumno.matricula)
-        cv.put(ECONOMIA, alumno.fechaNacimiento)
+        cv.put(ECONOMIA, alumno.economia)
 
         val success = db.insert(TBL_ALUMNO, null, cv)
         db.close()
@@ -109,7 +109,7 @@ class Conexion(context: Context) :
 
                 val alumno = Alumno(
                     idAlumno = idAlumno, nombre = nombre, estatura = estatura,
-                    matricula = matricula, fechaNacimiento = economia
+                    matricula = matricula, economia = economia
                 )
                 alumnos.add(alumno)
             } while (cursor.moveToNext())
@@ -124,7 +124,7 @@ class Conexion(context: Context) :
         cv.put(NOMBRE, alumno.nombre)
         cv.put(ESTATURA, alumno.estatura)
         cv.put(MATRICULA, alumno.matricula)
-        cv.put(ECONOMIA, alumno.fechaNacimiento)
+        cv.put(ECONOMIA, alumno.economia)
         val success = db.update(TBL_ALUMNO, cv, "id=" + alumno.idAlumno, null)
         db.close()
         return success

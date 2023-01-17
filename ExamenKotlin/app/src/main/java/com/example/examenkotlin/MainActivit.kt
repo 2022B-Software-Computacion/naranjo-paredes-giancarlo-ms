@@ -7,12 +7,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivit : AppCompatActivity() {
     private lateinit var edIdAlumno: TextView
     private lateinit var edNombre: EditText
     private lateinit var edEstatura: EditText
-    private lateinit var edMatricula: Spinner
-    private lateinit var fechaNacimiento: EditText
+    private lateinit var edMatricula: EditText
+    private lateinit var edEconomia: EditText
     private lateinit var btnIngresar: Button
     private lateinit var btnVisualizar: Button
     private lateinit var btnActualizar: Button
@@ -44,14 +44,14 @@ class MainActivity : AppCompatActivity() {
         btnActualizar.setOnClickListener { actualizarAlumno() }
 
         interfaz?.setOnClickItem {
-            var idAlumnoVista: String = "Codigo de alumno: " + it.idAlumno.toString()
+            val idAlumnoVista: String = "Codigo de alumno: " + it.idAlumno.toString()
             edIdAlumno.setText(idAlumnoVista)
             Toast.makeText(this, it.nombre, Toast.LENGTH_SHORT).show()
             // Colocamos los registros
             edNombre.setText(it.nombre)
             edEstatura.setText(it.estatura.toString())
             edMatricula.setText(it.matricula.toString())
-            fechaNacimiento.setText(it.fechaNacimiento.toString())
+            edEconomia.setText(it.economia.toString())
             alumno = it
         }
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         val nombre = edNombre.text.toString()
         val estatura = edEstatura.text.toString().toDouble()
         val matricula = edMatricula.text.toString().toInt()
-        val fechaNacimiento = fechaNacimiento.text.toString()
+        val economia = edEconomia.text.toString().toDouble()
 
         //Revisar que efectivamente haya cambios
         if (nombre == alumno?.nombre && estatura == alumno?.estatura) {
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             nombre = nombre,
             estatura = estatura,
             matricula = matricula,
-            fechaNacimiento = fechaNacimiento
+            economia = economia
         )
         val estado = conexion.actualizarAlumno(alumno)
         if (estado > -1) {
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         val nombre = edNombre.text.toString()
         val estatura = edEstatura.text.toString().toDouble()
         val matricula = edMatricula.text.toString().toInt()
-        val fechaNacimiento = fechaNacimiento.text.toString()
+        val economia = edEconomia.text.toString().toDouble()
 
         if (nombre.isEmpty()) {
             Toast.makeText(this, "Porfavor ingresar todos los campos", Toast.LENGTH_SHORT).show()
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                 nombre = nombre,
                 estatura = estatura,
                 matricula = matricula,
-                fechaNacimiento = fechaNacimiento
+                economia = economia
             )
             val estado = conexion.crearAlumno(alumno)
             if (estado > -1) {
@@ -124,7 +124,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun eliminarEstudiante(id: Int) {
-        if (id == null) return
         val builder = AlertDialog.Builder(this)
         builder.setMessage("Estas seguro que quieres eliminar este estudiante?")
         builder.setCancelable(true)
@@ -145,7 +144,7 @@ class MainActivity : AppCompatActivity() {
         edNombre.setText("")
         edEstatura.setText("")
         edMatricula.setText("")
-        fechaNacimiento.setText("")
+        edEconomia.setText("")
         edNombre.requestFocus()
 
     }
@@ -158,16 +157,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun inicializarVista() {
-        edIdAlumno = findViewById(R.id.edIdAlumno);
+        edIdAlumno = findViewById(R.id.edIdAlumno)
         edNombre = findViewById(R.id.edNombre)
         edEstatura = findViewById(R.id.edEstatura)
         edMatricula = findViewById(R.id.edMatricula)
-        var adaptador = ArrayAdapter.createFromResource(
+        ArrayAdapter.createFromResource(
             this,
             R.array.matriculado,
             android.R.layout.simple_spinner_item
         )
-        fechaNacimiento = findViewById(R.id.edFechaNacimiento)
+        edEconomia = findViewById(R.id.edEconomia)
         btnIngresar = findViewById(R.id.btnIngresar)
         btnVisualizar = findViewById(R.id.btnVisualizar)
         btnActualizar = findViewById(R.id.btnActualizar)
