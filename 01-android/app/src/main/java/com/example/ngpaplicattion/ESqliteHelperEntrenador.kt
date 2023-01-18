@@ -114,6 +114,7 @@ class ESqliteHelperEntrenador(
                 }
             } while (resultadoConsultaLectura.moveToNext())
         }
+        /**/
         usuarioEncontrado = BEntrenador(0, "", "")
         resultadoConsultaLectura.close()
         baseDatosLectura.close()
