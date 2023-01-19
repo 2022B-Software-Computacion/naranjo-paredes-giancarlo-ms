@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Giancarlo Naranjo\\.gradle\\daemon\\7.4\\com.example.examenkotlin.app-mergeDebugResources-28:\\layout\\borrar_alumnos.xml",
+        "source": "C:\\Users\\Giancarlo Naranjo\\.gradle\\daemon\\7.4\\com.example.examenkotlin.app-main-31:\\layout\\borrar_alumnos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Giancarlo Naranjo\\.gradle\\daemon\\7.4\\com.example.examenkotlin.app-mergeDebugResources-28:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Giancarlo Naranjo\\.gradle\\daemon\\7.4\\com.example.examenkotlin.app-main-31:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.examenkotlin.app-mergeDebugResources-28:/layout/activity_main.xml",
+        "source": "com.example.examenkotlin.app-main-31:/layout/activity_main.xml"
+    }
+]

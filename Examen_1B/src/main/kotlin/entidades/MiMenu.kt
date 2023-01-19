@@ -12,7 +12,7 @@ class MiMenu {
         for (i in opciones.indices) {
             println("${i + 1}" + " " + opciones[i])
         }
-        println("Escoger la base de datos: ")
+        print("Escoger la base de datos: ")
         when (sc.nextInt()) {
             1 -> {
                 visualizarOpcionesCRUDAlumno()
@@ -84,6 +84,10 @@ class MiMenu {
                 println("DELETE")
                 print("")
                 bdAlumno.delete()
+                bdAlumno.delete()
+                bdAlumno.delete()
+                bdAlumno.delete()
+
             }
         }
 

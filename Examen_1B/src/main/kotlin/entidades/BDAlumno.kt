@@ -16,6 +16,32 @@ class BDAlumno : Serializable {
         verificarInformacion()
     }
 
+    /*fun create(idColegioAlumno: Int): ArrayList<Alumno> {
+        do {
+            print("Nombre: ")
+            val nombreAlumno = sc.next()
+            print("Estatura: ")
+            val estatura = sc.nextDouble()
+            print("Fecha nacimiento: ")
+            val fechaNacimiento = sc.next()
+            print("Bloque: ")
+            val bloque = sc.next().first()
+            val alumno = Alumno(nombreAlumno, estatura, SimpleDateFormat(fechaNacimiento), bloque)
+            alumno.idColegio = idColegioAlumno
+            this.alumnosBD.add(alumno)
+            print("\nALUMNO CREADO CON EXITO!!")
+            print("\nCrear otro estudiante? Y/N: ")
+            val opcion = sc.next()
+            var bandera = false
+            if (opcion == "Y") {
+                bandera = true
+            }
+        } while (bandera)
+        escribirEnTxt()
+        guardarInformacionBD()
+        return this.alumnosBD
+    }*/
+
     fun create(): ArrayList<Alumno> {
         do {
             print("Nombre: ")
@@ -125,7 +151,7 @@ class BDAlumno : Serializable {
         out.close()
     }
 
-     fun escribirEnTxt() {
+    fun escribirEnTxt() {
         val archivo = File(this.rutaBaseSimulacionAlumno)
         /*Recorrer y escribir el arreglo de estudiantes*/
         archivo.bufferedWriter().use { out ->

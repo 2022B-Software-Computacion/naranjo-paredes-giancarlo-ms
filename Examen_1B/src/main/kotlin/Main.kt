@@ -5,5 +5,3 @@ fun main() {
     val miMenu = MiMenu()
     miMenu.escogerBD()
 }
-
-

@@ -1,0 +1,5 @@
+COLEGIO
+[25, 	CNC,	200.0,	E]
+ALUMNOS
+[40, Giancarlo, 1.7, 3, E]
+[2, Carlos, 1.7, 3, E]
