@@ -30,4 +30,6 @@ class Colegio(nombreColegio: String, inversion: Double, alumnos: ArrayList<Alumn
         val random = Random()
         return random.nextInt(100)
     }
+
+
 }

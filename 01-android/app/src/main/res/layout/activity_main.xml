@@ -48,4 +48,13 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_intent_implicito" />
 
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sqlite"
+        app:layout_constraintEnd_toEndOf="@+id/btn_intent"
+        app:layout_constraintStart_toStartOf="@+id/btn_intent"
+        tools:layout_editor_absoluteY="41dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

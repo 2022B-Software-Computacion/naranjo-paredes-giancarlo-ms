@@ -26,31 +26,15 @@ class BDColegio : Serializable {
         print("Seccion: ")
         val seccion = sc.next().first()
         println("CREACION ALUMNOS")
-        /*Primero generar id del colegio, despúes los alumnos, por último colocar id de colegio en
-        * los alumnos creados en dicho colegio */
-        //generar el id del colegio
-
-        val idColegio: Int = generarIdColegio()
-
-        //val alumnos: ArrayList<Alumno> = crearAlumno()
-        val alumnos: ArrayList<Alumno> = crearAlumno(idColegio)
-
-        //val colegio = Colegio(nombreColegio, inversion, alumnos, seccion)
+        val alumnos: ArrayList<Alumno> = crearAlumno()
         val colegio = Colegio(nombreColegio, inversion, alumnos, seccion)
-        colegio.idColegio = idColegio
-
-        verificarIdColegio(colegio, colegio.idColegio)
+        //verificarIdColegio(colegio, colegio.idColegio)
+        colocarIdAlumnos(colegio.alumnos, colegio.idColegio)
         this.colegiosBD.add(colegio)
         println("\nCOLEGIO AGREGADO CON EXITO")
         escribirEnTxt()
         guardarInformacionBD()
     }
-
-    private fun generarIdColegio(): Int {
-        val random = Random()
-        return random.nextInt(100)
-    }
-
 
     fun read() {
         escribirEnTxt()
@@ -99,18 +83,10 @@ class BDColegio : Serializable {
         }
     }
 
-    /*private fun crearAlumno(): ArrayList<Alumno> {
+    private fun crearAlumno(): ArrayList<Alumno> {
         /*Cuando se cree un alumno, enviar a la BD alumno*/
         val bdAlumno = BDAlumno()
         return bdAlumno.create()
-    }*/
-
-    private fun crearAlumno(idColegio: Int): ArrayList<Alumno> {
-        /*Cuando se cree un alumno, enviar a la BD alumno*/
-        val bdAlumno = BDAlumno()
-        val alumnos = bdAlumno.create()
-        colocarIdAlumnos(alumnos, idColegio)
-        return alumnos
     }
 
     private fun colocarIdAlumnos(alumnos: ArrayList<Alumno>, idColegio: Int) {

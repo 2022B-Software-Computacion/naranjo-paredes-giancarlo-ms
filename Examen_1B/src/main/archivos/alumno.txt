@@ -1,2 +1,2 @@
-[40, Giancarlo, 1.7, 0, E]
-[2, Carlos, 1.7, 0, E]
+[78, Giancarlo, 1.7, 0, B]
+[26, Carlos, 1.7, 0, B]

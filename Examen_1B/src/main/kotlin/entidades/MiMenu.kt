@@ -82,12 +82,11 @@ class MiMenu {
 
             4 -> {
                 println("DELETE")
-                print("")
-                bdAlumno.delete()
                 bdAlumno.delete()
                 bdAlumno.delete()
                 bdAlumno.delete()
 
+                print("")
             }
         }
 
