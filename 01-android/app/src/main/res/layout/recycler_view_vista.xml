@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_dar_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dar like"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <TextView
+        android:id="@+id/tv_cedula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cedula"
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:id="@+id/tv_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Likes"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="91dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

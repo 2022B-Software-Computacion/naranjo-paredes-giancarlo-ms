@@ -18,5 +18,6 @@
         <item>Martes</item>
         <item>miercoles</item>
     </string-array>
+    <string name="title_activity_hgoogle_maps">HGoogleMaps</string>
 </resources>
 
