@@ -36,10 +36,23 @@ android {
         viewBinding true
     }
 }
-
+def lifecycle_version = "2.4.0"
 dependencies {
     //FIRBASE:
     implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    //Libreria de autenticacion
+    implementation 'com.google.firebase:firebase-auth:21.0.2'
+    //UI libreria auth
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+    //Firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'

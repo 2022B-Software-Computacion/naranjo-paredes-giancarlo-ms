@@ -7,26 +7,37 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sqlite"
+        app:layout_constraintEnd_toEndOf="@+id/btn_intent"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toStartOf="@+id/btn_intent"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <Button
+        android:id="@+id/btn_ir_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="List view"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ciclo_vida"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/btn_ciclo_vida"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ciclo_vida" />
+
+    <Button
         android:id="@+id/btn_ciclo_vida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ciclo Vida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415" />
-
-    <Button
-        android:id="@+id/btn_ir_list_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="List view"
-        app:layout_constraintEnd_toEndOf="@+id/btn_ciclo_vida"
-        app:layout_constraintStart_toStartOf="@+id/btn_ciclo_vida"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ciclo_vida" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/btn_ir_intent_implicito"
@@ -35,13 +46,13 @@
         android:text="1. Implicito"
         app:layout_constraintEnd_toEndOf="@+id/btn_ciclo_vida"
         app:layout_constraintStart_toStartOf="@+id/btn_ciclo_vida"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteY="303dp" />
 
     <Button
         android:id="@+id/btn_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="40dp"
         android:text="1. Explicito "
         app:layout_constraintBottom_toTopOf="@+id/btn_ir_intent_implicito"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_intent_implicito"
@@ -49,20 +60,27 @@
         app:layout_constraintStart_toStartOf="@+id/btn_ir_intent_implicito" />
 
     <Button
-        android:id="@+id/btn_sqlite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sqlite"
-        app:layout_constraintEnd_toEndOf="@+id/btn_intent"
-        app:layout_constraintStart_toStartOf="@+id/btn_intent"
-        tools:layout_editor_absoluteY="41dp" />
-
-    <Button
         android:id="@+id/btn_revcycler_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="R. View"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <Button
+        android:id="@+id/btn_google_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="maps"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <Button
+        android:id="@+id/btn_intent_firebase_ui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="529dp" />
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="153dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

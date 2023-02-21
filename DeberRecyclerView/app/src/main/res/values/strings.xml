@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CamScanner</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_herramientas">Herramientas</string>
+    <string name="menu_documentos">Documentos</string>
+    <string name="menu_camara">Camara</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="placeHolder_searchView">Busca aqui tu documento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
