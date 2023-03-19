@@ -16,22 +16,22 @@ class AdapterEstudiante(
     var estudianteList: ArrayList<Estudiante>,
     private val contenidoIntentExplicito: ActivityResultLauncher<Intent>,
     val idColegio: String
-) : RecyclerView.Adapter<AdapterEstudiante.MyViewHolderCar>() {
+) : RecyclerView.Adapter<AdapterEstudiante.MyViewHolderEstudiante>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderCar {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderEstudiante {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.estudiante_item, parent, false)
-        return MyViewHolderCar(itemView)
+        return MyViewHolderEstudiante(itemView)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolderCar, position: Int) {
-        val currentCar = estudianteList[position]
-        holder.idEstudiante.text = currentCar.id
-        holder.nombreEstudiante.text = currentCar.nombre
-        holder.estatura.text = currentCar.estatura.toString()
-        holder.bloque.text = currentCar.bloque
-        holder.fechaNacimiento.text = currentCar.fechaNacimiento
+    override fun onBindViewHolder(holder: MyViewHolderEstudiante, position: Int) {
+        val estudianteActual = estudianteList[position]
+        holder.idEstudiante.text = estudianteActual.id
+        holder.nombreEstudiante.text = estudianteActual.nombre
+        holder.estatura.text = estudianteActual.estatura.toString()
+        holder.bloque.text = estudianteActual.bloque
+        holder.fechaNacimiento.text = estudianteActual.fechaNacimiento
         holder.btnEditarEstudiante.setOnClickListener {
-            abrirActividadConParametros(EditEstudianteInfoActivity::class.java, currentCar, it, idColegio)
+            abrirActividadConParametros(EditEstudianteInfoActivity::class.java, estudianteActual, it, idColegio)
         }
         holder.btnEliminarEstudiante.setOnClickListener {
 
@@ -40,8 +40,8 @@ class AdapterEstudiante(
             builder.setMessage("Estás seguro que lo quieres eliminar?")
             builder.setPositiveButton("Si") { dialog, _ ->
                 dialog.dismiss()
-                deleteCar(currentCar.id!!, idColegio)
-                this.estudianteList.remove(currentCar)
+                deleteEstudiante(estudianteActual.id!!, idColegio)
+                this.estudianteList.remove(estudianteActual)
                 notifyDataSetChanged()
             }
             builder.setNegativeButton("No") { dialog, _ ->
@@ -54,11 +54,11 @@ class AdapterEstudiante(
 
     }
 
-    private fun deleteCar(id: String, idColegio: String) {
+    private fun deleteEstudiante(id: String, idColegio: String) {
         val db = Firebase.firestore
         val users = db.collection("colegio")
-        val carsCollectionsRef = users.document(idColegio).collection("cars")
-        carsCollectionsRef.document(id).delete().addOnSuccessListener {
+        val estudiantesCollectionsRef = users.document(idColegio).collection("cars")
+        estudiantesCollectionsRef.document(id).delete().addOnSuccessListener {
 
         }.addOnFailureListener {
 
@@ -83,7 +83,7 @@ class AdapterEstudiante(
         contenidoIntentExplicito.launch(intent)
     }
 
-    class MyViewHolderCar(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class MyViewHolderEstudiante(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val idEstudiante = itemView.findViewById<TextView>(R.id.tv_id_estudiante)
         val nombreEstudiante = itemView.findViewById<TextView>(R.id.tv_nombre_estudiante)

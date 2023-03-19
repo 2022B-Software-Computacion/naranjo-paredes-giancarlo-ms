@@ -1,5 +1,6 @@
 package com.example.crudfirebase
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,25 +26,26 @@ class EstudianteListActivity : AppCompatActivity() {
         }
     }
 
-    private lateinit var carRecyclerView: RecyclerView
+    private lateinit var estudianteRecyclerView: RecyclerView
     private lateinit var estudianteArrayList: ArrayList<Estudiante>
-    private lateinit var adapterCar: AdapterEstudiante
+    private lateinit var adapterEstudiante: AdapterEstudiante
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudiante_list)
 
         var id = intent.getStringExtra("colegioId")
 
-        carRecyclerView = findViewById(R.id.carListRecyclerView)
-        carRecyclerView.layoutManager = LinearLayoutManager(this)
-        carRecyclerView.setHasFixedSize(true)
+        estudianteRecyclerView = findViewById(R.id.estudianteListRecyclerView)
+        estudianteRecyclerView.layoutManager = LinearLayoutManager(this)
+        estudianteRecyclerView.setHasFixedSize(true)
         estudianteArrayList = arrayListOf<Estudiante>()
         if (id != null) {
             consultarDocumentosColegio(id!!)
         }
-        adapterCar = AdapterEstudiante(estudianteArrayList, contenidoIntentExplicito, id!!)
-        carRecyclerView.adapter = adapterCar
+        adapterEstudiante = AdapterEstudiante(estudianteArrayList, contenidoIntentExplicito, id!!)
+        estudianteRecyclerView.adapter = adapterEstudiante
 
         val btnNuevoEstudiante = findViewById<Button>(R.id.btn_nuevo_estudiante)
         btnNuevoEstudiante.setOnClickListener {
@@ -69,8 +71,8 @@ class EstudianteListActivity : AppCompatActivity() {
                     this.estudianteArrayList.add(estudiante)
 
             }
-            adapterCar.estudianteList = estudianteArrayList
-            adapterCar.notifyDataSetChanged()
+            adapterEstudiante.estudianteList = estudianteArrayList
+            adapterEstudiante.notifyDataSetChanged()
         }
 
     }

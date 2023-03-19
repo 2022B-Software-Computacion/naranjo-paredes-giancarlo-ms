@@ -112,7 +112,7 @@ class EditEstudianteInfoActivity : AppCompatActivity() {
 
         val db = Firebase.firestore
         val users = db.collection("colegio")
-        val carsCollectionsRef = users.document(id!!).collection("estudiante")
+        val estudiantesCollectionsRef = users.document(id!!).collection("estudiante")
         val dataEstudiante = hashMapOf(
             "id" to estudianteId,
             "nombre" to textNombre,
@@ -120,7 +120,7 @@ class EditEstudianteInfoActivity : AppCompatActivity() {
             "fechaNacimiento" to textFechaNacimiento,
             "bloque" to textBloque
         )
-        carsCollectionsRef.document(estudianteId).set(dataEstudiante)
+        estudiantesCollectionsRef.document(estudianteId).set(dataEstudiante)
 
     }
 
